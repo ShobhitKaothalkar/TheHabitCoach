@@ -1,0 +1,44 @@
+{% extends 'users/base.html' %}
+{% block content %}
+    <div class="mt-5 row justify-content-center">
+        <form method="POST" class="card col-6 p-5 mt-3">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.first_name }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.last_name }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.email }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Password</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.password1 }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.password2 }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.dob }}
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Gender</label>
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+            {{ form.gender }}
+          </div>
+          <button type="submit" class="btn btn-primary btn-small col-3">Submit</button>
+        </form>
+    </div>
+{% endblock %}

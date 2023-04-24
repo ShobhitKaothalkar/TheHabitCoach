@@ -1,0 +1,10 @@
+{% extends 'users/base.html' %}
+{% block content %}
+    <div class="mt-5 row justify-content-center">
+        <form method="POST" class="card col-6 p-5 mt-3">
+        {% csrf_token %}
+          {{ form }}
+          <button type="submit" class="btn btn-primary btn-small col-3">Log</button>
+        </form>
+    </div>
+{% endblock %}
